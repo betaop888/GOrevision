@@ -1,0 +1,22 @@
+{
+  "listen": ":8080",
+  "algorithm": "round_robin",
+  "health_check": {
+    "path": "/health",
+    "interval": "2s",
+    "timeout": "1s",
+    "healthy_threshold": 1,
+    "unhealthy_threshold": 2
+  },
+  "backends": [
+    {
+      "url": "http://localhost:9001"
+    },
+    {
+      "url": "http://localhost:9002"
+    },
+    {
+      "url": "http://localhost:9003"
+    }
+  ]
+}
